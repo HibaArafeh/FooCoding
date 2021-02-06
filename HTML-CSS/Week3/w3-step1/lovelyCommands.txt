@@ -1,0 +1,4 @@
+2:dog
+3:hamster
+2:ls
+3:pwd
