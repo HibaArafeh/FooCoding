@@ -1,0 +1,132 @@
+body {
+    background-color: white;
+    font-family: Arial, serif;	
+}
+section {
+    clear: left;
+}
+h1 {
+    text-align: center;
+    color: gray;
+}
+h2 {
+    text-align: center;
+    color: red;
+}
+h3 {
+    text-align: center;
+}
+img {
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    border: black;
+    background-color: white;
+}
+#grid-floats {
+    width: 100%;
+    font-size: 12px;
+    align-items: center;
+    align-self: auto;
+    text-align: justify;
+    align-content: space-between;
+    align-content: space-around;
+    list-style-type: none;
+    
+    
+}
+#grid-flex {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: raw;
+    flex-wrap: wrap;
+    height: 100px;
+    align-items: center;
+    align-self: auto;
+    text-align: justify;
+    grid-gap: 1%;
+    list-style-type: none;
+  }
+  #grid-flex .grid-item {
+    width: 45%;
+    margin: 1% 1%;
+  }
+  #grid-floats .grid-item {
+    margin: 2%;
+  }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+#grid-floats .grid-item:nth-child(2n+2) {
+    clear:left;
+}
+#grid-floats .grid-item:nth-child(1) {
+    float: left;
+    width: 84%;
+}
+#grid-floats .grid-item:nth-child(n+2) {
+    float: left;
+    width: 40%;
+}
+#grid-flex .grid-item:nth-child(1) {
+    width: 84%;	
+}
+#grid-flex .grid-item:nth-child(n+2) {
+    width: 40%;
+}
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+#grid-floats .grid-item:nth-child(-n+2) {
+    float: left;
+    width: 46%;	
+}
+#grid-floats .grid-item:nth-child(n+3) {
+    float: left;
+    width: 27%;
+}
+#grid-floats .grid-item:nth-child(3n+3) {
+    clear:both;
+}
+#grid-floats .grid-item:nth-child(1) .p {
+    font-size: 5px;
+}
+#grid-flex .grid-item:nth-child(1) .grid-item:nth-child(2) {
+    width: 46%;	
+}
+#grid-flex .grid-item:nth-child(n+3) {
+    width: 27%;
+}
+#grid-flex .grid-item:nth-child(1) .p {
+    font-size: 5px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+#grid-floats .grid-item:nth-child(1) {
+    float: left;
+    width: 42%;		
+}
+#grid-floats .grid-item:nth-child(n+2) {
+    float: left;
+    width: 21%;	
+}
+#grid-floats .grid-item:nth-child(4n+4) {
+    clear:both;
+}
+#grid-floats .grid-item:nth-child(1) .p {
+    font-size: 8px;
+}
+#grid-flex .grid-item:nth-child(1) {
+    width: 42%;
+}
+#grid-flex .grid-item:nth-child(n+2) {
+    width: 21%;
+}
+#grid-flex .grid-item:nth-child(1) .p {
+    font-size: 8px;
+}
+}
